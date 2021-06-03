@@ -6,23 +6,27 @@
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-/*     .city{
-      position: absolute;
-    } */
+
     .container{
       display:flex;
       
       flex-direction:column;
-      text-align:center;
+      align-items:center;
     }
+	#op{
+	width:200px;
+	}
 
   </style>
   </head>
 <body>
 <div class="container" >
   <h2 align="center" style="color: red; ">Convert Decimal to Binary</h2>
-<input align="center" type="number"  id="o" value="0" required>
-<button align="center" onclick="dec2bin()" >Convert</button>
+  <span class="nav">
+      
+  </span>
+<input type="number"  id="op" value="0" required><br><br>
+<button onclick="dec2bin()" style="width: 100px;">Convert</button>
 
 <h3 id="demo" align="center"  style="color:darkblue;">No input</h3>
 </div>
@@ -31,7 +35,7 @@
 <script>
 
 function dec2bin(){
-var de=document.getElementById("o").value;
+var de=document.getElementById("op").value;
 var v= "Binary Representation of "+de+" is "+(de >>> 0).toString(2)
   document.getElementById("demo").innerHTML =v;
 }
